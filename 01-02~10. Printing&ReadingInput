@@ -1,0 +1,134 @@
+01-02
+public class AdaLovelace {
+
+    public static void main(String[] args) {
+        // Write your program here
+        System.out.println("Ada Lovelace");
+    }
+}
+
+01-03
+public class OnceUponATime {
+
+    public static void main(String[] args) {
+        System.out.println("Once upon a time");
+        System.out.println("there was");
+        System.out.println("a program");// Write your program here
+    }
+}
+
+//代码是有快捷键的，java快捷键在vscode里面有么？因为我用的是vscode，我需要找一下在vscode里面使用的是什么样的快捷键
+
+01-04
+
+public class Dinosaur {
+
+    public static void main(String[] args) {
+        System.out.println("Once upon a time");
+        System.out.println("there was");
+        System.out.println("a dinosaur");// Write your program here
+    }
+}
+
+01-05
+
+import java.util.Scanner;
+
+public class Message {
+
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.println("Write a message:");
+        String message = scanner.nextLine();
+        System.out.println(message);// Write your program here
+
+    }
+}
+
+01-06
+
+public class HiAdaLovelace {
+
+    public static void main(String[] args) {
+        String name = "Ada Lovelace";
+        System.out.println("Hi " + name + "!");
+
+    }
+}
+
+01-07
+
+import java.util.Scanner;
+
+public class MessageThreeTimes {
+
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.println("Write a message:");
+        String message = scanner.nextLine();
+        System.out.println(message);
+        System.out.println(message);
+        System.out.println(message);// Write your program here
+
+    }
+}
+
+01-08
+
+import java.util.Scanner;
+
+public class Greeting {
+
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.println("What's your name?");
+        String name = scanner.nextLine();
+        System.out.println("Hi " + name);// Write your program here
+
+    }
+}
+
+
+01-09
+
+import java.util.Scanner;
+
+public class Conversation {
+
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.println("Greetings! How are you doing?");
+        String A1 = scanner.nextLine();
+        System.out.println("Oh, how interesting. Tell me more!");
+        String A2 = scanner.nextLine();
+        System.out.println("Thanks for sharing!");// Write your program here
+
+    }
+}
+
+01-10
+
+import java.util.Scanner;
+
+public class Story {
+
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.println("I will tell you a story, but I need some information first.");
+        System.out.println("What is the main character called?");
+        String name = scanner.nextLine();
+        System.out.println("What is their job?");
+        String job = scanner.nextLine();
+        System.out.println("Here is the story:");
+        System.out.println("Once upon a time there was " + name + ", who was " + job + ".");
+        System.out.println("On the way to work, " + name + " reflected on life.");
+        System.out.println("Perhaps " + name + " will not be " + job + " forever.");// Write your program here
+
+    }
+}
+
