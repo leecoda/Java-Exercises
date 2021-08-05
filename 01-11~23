@@ -1,0 +1,241 @@
+01-11
+public class VariousVariables {
+
+    public static void main(String[] args) {
+        // MODIFY THESE:
+
+        int numberOfChicken = 9000;
+        double baconWeight = 0.1;
+        String tractor = "Zetor";
+
+        // DON'T MODIFY THESE:
+        System.out.println("Chicken:");
+        System.out.println(numberOfChicken);
+        System.out.println("Bacon (kg):");
+        System.out.println(baconWeight);
+        System.out.println("Tractor:");
+        System.out.println(tractor);
+        System.out.println("");
+        System.out.println("And finally, a summary:");
+        System.out.println(numberOfChicken);
+        System.out.println(baconWeight);
+        System.out.println(tractor);
+    }
+
+01-12
+import java.util.Scanner;
+
+public class IntegerInput {
+
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.println("Give a number:");
+        int number = Integer.valueOf(scanner.nextLine());
+        System.out.println("You gave the number " + number);// write your program here
+
+    }
+}
+
+01-13
+import java.util.Scanner;
+
+public class DoubleInput {
+
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.println("Give a number:");
+        Double floponum = Double.valueOf(scanner.nextLine());
+        System.out.println("You gave the number " + floponum);// write your program here
+
+    }
+}
+
+01-14
+import java.util.Scanner;
+
+public class BooleanInput {
+
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.println("Write something:");
+        boolean value = Boolean.valueOf(scanner.nextLine());
+        System.out.println("True or false? " + value);// write your program here
+
+    }
+}
+
+01-15
+import java.util.Scanner;
+
+public class DifferentTypesOfInput {
+
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.println("Give a string:");
+        String value = scanner.nextLine();
+        System.out.println("Give an integer:");
+        int number = Integer.valueOf(scanner.nextLine());
+        System.out.println("Give a double:");
+        double floponum = Double.valueOf(scanner.nextLine());
+        System.out.println("Give a boolean:");
+        boolean blValue = Boolean.valueOf(scanner.nextLine());
+        
+        System.out.println("You gave the string " + value);
+        System.out.println("You gave the integer " + number);
+        System.out.println("You gave the double " + floponum);
+        System.out.println("You gave the boolean " + blValue);// Write your program here
+
+    }
+}
+
+01-16
+import java.util.Scanner;
+
+public class SecondsInADay {
+
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.println("How many days would you like to convert to seconds?");
+        int day = Integer.valueOf(scanner.nextLine());
+        System.out.println(24 * 60 * 60 * day);// Write your program here
+
+    }
+}
+
+01-17
+import java.util.Scanner;
+
+public class SumOfTwoNumbers {
+
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.println("Give the first number:");
+        int first = Integer.valueOf(scanner.nextLine());
+        System.out.println("Give the second number:");
+        int second = Integer.valueOf(scanner.nextLine());
+        
+        System.out.println("The sum of the numbers is " + (first + second));// Write your program here
+
+    }import java.util.Scanner;
+
+public class SumOfThreeNumbers {
+
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.println("Give the first number:");
+        int first = Integer.valueOf(scanner.nextLine());
+        System.out.println("Give the second number:");
+        int second = Integer.valueOf(scanner.nextLine());
+        System.out.println("Give the third number:");
+        int third = Integer.valueOf(scanner.nextLine());
+        
+        System.out.println("The sum of the numbers is " + (first + second + third));// Write your program here
+
+    }
+}
+
+01-19
+import java.util.Scanner;
+
+public class AdditionFormula {
+
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.println("Give the first number:");
+        int first = Integer.valueOf(scanner.nextLine());
+        System.out.println("Give the second number:");
+        int second = Integer.valueOf(scanner.nextLine());
+        System.out.println((first) + " + " + (second) + " = " + (first + second));// write your program here
+
+    }
+}
+
+01-20
+import java.util.Scanner;
+
+public class MultiplicationFormula {
+
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.println("Give the first number:");
+        int first = Integer.valueOf(scanner.nextLine());
+        System.out.println("Give the second number:");
+        int second = Integer.valueOf(scanner.nextLine());
+        System.out.println((first) + " * " + (second) + " = " + (first * second));// Write your program here
+
+    }
+}
+
+01-21
+import java.util.Scanner;
+
+public class AverageOfTwoNumbers {
+
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.println("Give the first number:");
+        int first = Integer.valueOf(scanner.nextLine());
+        System.out.println("Give the second number:");
+        int second = Integer.valueOf(scanner.nextLine());
+        
+        System.out.println("The average is " + 1.0 * (first + second) / second);// Write your program here
+
+    }
+}
+
+01-22
+import java.util.Scanner;
+
+public class AverageOfThreeNumbers {
+
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.println("Give the first number:");
+        int first = Integer.valueOf(scanner.nextLine());
+        System.out.println("Give the second number:");
+        int second = Integer.valueOf(scanner.nextLine());
+        System.out.println("Give the third number:");
+        int third = Integer.valueOf(scanner.nextLine());
+        
+        System.out.println("The average is " + 1.0 * (first + second + third) / 3);// Write your program here
+
+    }
+}
+
+01-23
+import java.util.Scanner;
+
+public class SimpleCalculator {
+
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.println("Give the first number:");
+        int first = Integer.valueOf(scanner.nextLine());
+        System.out.println("Give the second number:");
+        int second = Integer.valueOf(scanner.nextLine());
+        
+        System.out.println((first) + " + " + (second) + " = " + (first + second));
+        System.out.println((first) + " - " + (second) + " = " + (first - second));
+        System.out.println((first) + " * " + (second) + " = " + (first * second));
+        System.out.println((first) + " / " + (second) + " = " + (1.0 * first / second));// Write your program here
+
+    }
+}
+
+
+}
+
+01-18
+
