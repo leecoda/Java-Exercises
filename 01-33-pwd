@@ -1,0 +1,18 @@
+01-33
+import java.util.Scanner;
+
+public class Password {
+
+    public static void main(String[] args) {
+        Scanner scan = new Scanner(System.in);
+
+        System.out.println("Password?");
+        String pwd = scan.nextLine();
+        if (pwd.equals("Wattlebird")) {
+            System.out.println("Off with you!");
+        }
+        if (pwd.equals("Caput Draconis")) {
+            System.out.println("Welcome!");
+        }// Write your program here 
+    }
+}
