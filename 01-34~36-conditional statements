@@ -1,0 +1,59 @@
+01-34
+import java.util.Scanner;
+
+public class Same {
+
+    public static void main(String[] args) {
+        Scanner scan = new Scanner(System.in);
+
+        System.out.println("Enter the first string:");
+        String first = scan.nextLine();
+        System.out.println("Enter the second string:");
+        String second = scan.nextLine();
+        if (first.equals(second)) {
+            System.out.println("Same");
+        } else {
+            System.out.println("Different");
+        }// Write your program here. 
+    }
+}
+
+01-35
+import java.util.Scanner;
+
+public class CheckingTheAge {
+
+    public static void main(String[] args) {
+        Scanner scan = new Scanner(System.in);
+
+        System.out.println("How old are you?");
+        int age = Integer.valueOf(scan.nextLine());
+        if (age >= 0 && age <= 120) {
+            System.out.println("OK");
+        } else {
+            System.out.println("Impossible!");
+        }
+
+    }
+}
+
+01-36
+import java.util.Scanner;
+
+public class LeapYear {
+
+    public static void main(String[] args) {
+        Scanner scan = new Scanner(System.in);
+        System.out.println("Give a year:");
+        int year = Integer.valueOf(scan.nextLine());
+        if (year % 4 != 0 ) {
+            System.out.println("This year is not a leap year.");
+        } else if (year % 100 != 0) {
+            System.out.println("This year is a leap year.");
+        } else if (year % 400 == 0) {
+            System.out.println("This year is a leap year.");
+        } else {
+            System.out.println("This year is not a learp year.");
+        }
+    }
+}
