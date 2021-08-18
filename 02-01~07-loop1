@@ -1,0 +1,121 @@
+02-01
+
+import java.util.Scanner;
+
+public class Squared {
+
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        int number = Integer.valueOf(scanner.nextLine());
+        int squared = number * number;
+        System.out.println(squared);
+    }
+}
+
+02-02
+import java.util.Scanner;
+
+public class SquareRootOfSum {
+
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        int first = Integer.valueOf(scanner.nextLine());
+        int second = Integer.valueOf(scanner.nextLine());
+        int sum = first + second;
+        
+        double squareRoot = Math.sqrt(sum);
+        System.out.println(squareRoot);
+    }
+}
+
+02-03
+import java.util.Scanner;
+
+public class AbsoluteValue {
+
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        int number = Integer.valueOf(scanner.nextLine());
+        if (number < 0) {
+            System.out.println(number * -1);
+        } else {
+            System.out.println(number);
+        }
+    }
+}
+
+02-04
+import java.util.Scanner;
+
+public class ComparingNumbers {
+
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        int first = Integer.valueOf(scanner.nextLine());
+        int second = Integer.valueOf(scanner.nextLine());
+        if (first < second) {
+            System.out.println(first + " is smaller than " + second + ".");
+        } else if (first > second) {
+            System.out.println(first + " is greater than " + second + ".");
+        } else {
+            System.out.println(first + " is equal to " + second + ".");
+        }
+    }
+}
+
+02-05
+import java.util.Scanner;
+
+public class CarryOn {
+
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        while (true) {
+            System.out.println("Shall we carry on?");
+            String input = scanner.nextLine();
+            if (input.equals("no")) {
+                break;
+            }
+        }
+    }
+}
+
+02-06
+import java.util.Scanner;
+
+public class AreWeThereYet {
+
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        while (true) {
+            System.out.println("Give a number:");
+            int number = Integer.valueOf(scanner.nextLine());
+            if (number == 4) {
+                break;
+            }
+        }
+        
+    }
+}
+
+02-07
+import java.util.Scanner;
+
+public class OnlyPositives {
+
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        while (true) {
+            System.out.println("Give a number:");
+            int number = Integer.valueOf(scanner.nextLine());
+            if (number == 0) {
+                break;
+            }
+            if (number > 0) {
+                System.out.println(number * number);
+                continue;
+            }
+            System.out.println("Unsuitable number!");
+        }
+    }
+}
