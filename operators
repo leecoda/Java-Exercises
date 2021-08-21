@@ -1,0 +1,47 @@
+
+import java.util.Scanner;
+
+public class Main {
+
+   public static void main(String[] args) {
+       Scanner scanner = new Scanner(System.in);
+       //get salaries
+       int salary1 = scanner.nextInt();
+       int salary2 = scanner.nextInt();
+       System.out.println(salary1 + salary2);//your code goes here
+       
+
+   }
+}
+
+import java.util.Scanner;
+
+public class Main {
+
+   public static void main(String[] args) {
+       Scanner scanner = new Scanner(System.in);
+       double pi = 3.14;
+       int r = Integer.valueOf(scanner.nextLine());
+       double cycle = 2 * r * pi;
+       System.out.println(cycle);//your code goes here
+       
+   }
+}
+
+import java.util.Scanner;
+
+public class Main {
+
+   public static void main(String[] args) {
+       Scanner scanner = new Scanner(System.in);
+       int math = scanner.nextInt();
+       int history = scanner.nextInt();
+       int geometry = scanner.nextInt();
+       int time = (math + history +geometry) / 60;
+		int mtime = (math + history +geometry) % 60;
+		System.out.println(time);
+		System.out.println(mtime);
+       //your code goes here
+       
+   }
+}
