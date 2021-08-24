@@ -153,3 +153,22 @@ public class CountingToHundred {
         }
     }
 }
+
+02-16.1
+
+ System.out.println("Where to?");
+        int toNumber = scanner.nextInt();
+        System.out.println("Where from?");
+        int fromNumber = scanner.nextInt();
+        for (int d = fromNumber; d <= toNumber; d++) {
+            System.out.println(d);
+        }
+
+02-16.02
+ System.out.println("Where to?");
+        int toNumber = scanner.nextInt();
+        System.out.println("Where from?");
+        int fromNumber = scanner.nextInt();
+        for (int d = fromNumber; d <= toNumber; d++) {
+            System.out.println(d);
+        }
