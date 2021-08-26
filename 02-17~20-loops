@@ -1,0 +1,97 @@
+02-17
+import java.util.Scanner;
+
+public class SumOfASequence {
+
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Last number?");
+        int number = scanner.nextInt();
+        int sum = 0;
+        for (int i = 1; i <= number; i++) {
+            sum = sum + i;
+        }
+        System.out.println("The sum is " + sum);
+    }
+}
+
+02-18
+import java.util.Scanner;
+
+public class SumOfASequenceTheSequel {
+
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("First number?");
+        int first = scanner.nextInt();
+        System.out.println("Last number?");
+        int last = scanner.nextInt();
+        int sum = 0;
+        for (int i = first; i <= last; i++) {
+            sum = sum + i;
+        }
+        System.out.println("The sum is " + sum);
+    }
+}
+
+02-19
+import java.util.Scanner;
+
+public class Factorial {
+
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Last number?");
+        int number = scanner.nextInt();
+        int factorial = 1;
+        for (int i = 1; i <= number; i++) {
+            factorial = factorial * i;
+        }
+        System.out.println("The sum is " + factorial);
+    }
+}
+
+02-20 （5 parts）
+import java.util.Scanner;
+
+public class RepeatingBreakingAndRemembering {
+
+    public static void main(String[] args) {
+        
+       // This exercise is worth five exercise points, and it is 
+        // gradually extended part by part.
+        
+        // If you want, you can send this exercise to the server
+        // when it's just partially done. In that case the server will complain about 
+        // the parts you haven't done, but you'll get points for the finished parts.
+        
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Give numbers:");
+        int sum =0;
+        int i = 0;
+        int odd = 0;
+        int even = 0;
+        while (true) {
+            int number = scanner.nextInt();
+            if (number == -1) {
+                break;
+            }
+            if (number % 2 != 0 && number != -1) {
+                odd++;
+            } else {
+                even++;
+            }
+            sum += number;
+            i++;
+        }
+        System.out.println("Thx! Bye!");
+        System.out.println("sum: " + sum);
+        System.out.println("Numbers: " + i);
+        double average = (double) sum / i;
+        System.out.println("Average: " + average);
+        System.out.println("Even: " + even);
+        System.out.println("Odd: " + odd);
+
+    }
+}
+
