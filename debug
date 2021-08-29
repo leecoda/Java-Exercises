@@ -1,0 +1,85 @@
+要求：
+
+让用户输入数字
+输入-1的时候停止，并输出 “Thx! Bye!”
+对于输入的其他数字（即不含-1）：求和，求个数，求平均数，求偶数个数，求奇数个数
+
+代码出现问题部分：求偶数个数求奇数个数部分
+已修正
+
+
+有问题的代码
+import java.util.Scanner;
+
+public class RepeatingBreakingAndRemembering {
+
+    public static void main(String[] args) {
+        
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Give numbers:");
+        int sum =0;
+        int i = 0;
+        int odd = 0;
+        int even = 0;
+        while (true) {
+            int number = scanner.nextInt();
+            if (number == -1) {
+                break;
+            }
+            if (number % 2 == 0) {
+                even++;
+            } else {
+                odd++;
+            }
+            sum += number;
+            i++;
+        }
+        System.out.println("Thx! Bye!");
+        System.out.println("sum: " + sum);
+        System.out.println("Numbers: " + i);
+        double average = (double) sum / i;
+        System.out.println("Average: " + average);
+        System.out.println("Even: " + even);
+        System.out.println("Odd: " + odd);
+
+    }
+}
+
+
+修改正确的：
+import java.util.Scanner;
+
+public class RepeatingBreakingAndRemembering {
+
+    public static void main(String[] args) {
+        
+    
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Give numbers:");
+        int sum =0;
+        int i = 0;
+        int odd = 0;
+        int even = 0;
+        while (true) {
+            int number = scanner.nextInt();
+            if (number == -1) {
+                break;
+            }
+            if (number % 2 != 0 && number != -1) {
+                odd++;
+            } else {
+                even++;
+            }
+            sum += number;
+            i++;
+        }
+        System.out.println("Thx! Bye!");
+        System.out.println("sum: " + sum);
+        System.out.println("Numbers: " + i);
+        double average = (double) sum / i;
+        System.out.println("Average: " + average);
+        System.out.println("Even: " + even);
+        System.out.println("Odd: " + odd);
+
+    }
+}
