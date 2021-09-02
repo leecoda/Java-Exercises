@@ -1,0 +1,76 @@
+switch
+import java.util.Scanner;
+
+public class Main {
+   public static void main(String[] args) {
+       Scanner scanner = new Scanner(System.in);
+       int emotion = scanner.nextInt();
+       switch(emotion){
+       	case 1:
+       		System.out.println("You are happy!");
+				break;
+			case 2:
+				System.out.println("You are sad!");
+				break;
+			case 3:
+				System.out.println("You are angry!");
+				break;
+			case 4:
+				System.out.println("You are surprised!");
+				break;
+			default:
+				System.out.println("Unknown emotion.");
+       }
+       	
+       /*
+       1 - "You are happy!"
+       2 - "You are sad!"
+       3 - "You are angry!"
+       4 - "You are surprised!"
+       other - "Unknown emotion."
+       */
+       
+       // your code goes here
+       
+       
+   }
+}
+
+02-25
+public class Division {
+
+    public static void main(String[] args) {
+        division(3,5);
+        // Once you have implemented the division method, you can
+        // try it out here. Fopr example division(3,5);
+        // should print "0.6"
+
+        // division(3, 5);
+    }
+    public static void division(int numerator, int denominator) {
+        double result = (double)numerator / denominator;
+        System.out.println(result);
+    }
+    // implement the method here
+}
+
+02-26
+import java.util.Scanner;
+
+public class DivisibleByThree {
+
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        int smallInt = scanner.nextInt();
+        int largeInt = scanner.nextInt();
+        divisibleByThreeInRange(smallInt, largeInt);
+    }
+    public static void divisibleByThreeInRange(int first, int second) {
+        while (first <= second) {
+            if (first % 3 == 0) {
+                System.out.println(first);
+            }
+            first++;
+        }
+    }
+}
