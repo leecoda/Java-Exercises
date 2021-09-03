@@ -1,0 +1,223 @@
+02-27
+
+import java.util.Scanner;
+
+public class NumberUno {
+
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        int number = numberUno();
+        System.out.println(number);
+    }
+    public static int numberUno() {
+        return 1;
+    }
+}
+
+02-28
+import java.util.Scanner;
+
+public class Word {
+
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        String pwd = word();
+        System.out.println(pwd);
+    }
+    public static String word() {
+        return "happy";
+    }
+}
+
+
+02-29
+public class Summation {
+
+    public static int sum(int num1, int num2, int num3, int num4) {
+        // write some code here
+        return num1 + num2 + num3 + num4;
+    }
+
+    public static void main(String[] args) {
+        int result = sum(4, 3, 6, 1);
+        System.out.println("Sum: " + result);
+    }
+}
+
+
+02-30
+public class Smallest {
+
+    public static int smallest(int number1, int number2) {
+        // Write some code here
+        // don't print anything inside this method
+        // there must be a return in the end of the method
+        if (number1 < number2) {
+            return number1;
+        } 
+        return number2;
+        
+    }
+
+    public static void main(String[] args) {
+        int result = smallest(2, 7);
+        System.out.println("Smallest: " + result);
+    }
+}
+
+02-31
+public class Greatest {
+
+    public static int greatest(int number1, int number2, int number3) {
+        //write some code here
+
+        if (number1 > number2 && number1 > number3) {
+            return number1;
+        }
+        if (number2 > number1 && number2 > number3) {
+            return number2;
+        }
+        return number3;
+    }
+
+    public static void main(String[] args) {
+        int result = greatest(2, 7, 3);
+        System.out.println("Greatest: " + result);
+    }
+}
+
+02-32
+public class Averaging {
+
+    // implement the sum method here again
+    public static int sum(int number1, int number2, int number3, int number4) {
+        // write some code here
+        int result = number1 + number2 + number3 + number4;
+        return result;
+    }
+
+    public static double average(int number1, int number2, int number3, int number4) {
+        //write some code here
+        double avg = sum(number1, number2, number3, number4) / 4.0;
+        return avg;
+    }
+
+    public static void main(String[] args) {
+        double result = average(4, 3, 6, 1);
+        System.out.println("Average: " + result);
+    }
+}
+
+02-33
+public class StarSign {
+
+    public static void main(String[] args) {
+
+        
+        //The tests are not checking the main, so you can modify it freely.
+        //NB: If the tests don't seem to pass, you should try the methods here
+        //in the main to make sure they print the correct shapes!
+        
+        printStars(3);
+        System.out.println("\n---");  // printing --- between the shapes
+        printSquare(4);
+        System.out.println("\n---");
+        printRectangle(5, 6);
+        System.out.println("\n---");
+        printTriangle(3);
+        System.out.println("\n---");
+    }
+
+    public static void printStars(int number) {
+        int i = 0;
+        while (i < number) {
+            System.out.print("*");
+            i++;
+        }
+        System.out.print("\n");
+        // first part of the exercise
+    }
+
+    public static void printSquare(int size) {
+        int m = 0;
+        while (m < size) {
+            printStars(size);
+            m++;
+        }
+        // second part of the exercise
+    }
+
+    public static void printRectangle(int width, int height) {
+        int n = 0;
+        while (n < height) {
+            printStars(width);
+            n++;
+        }// third part of the exercise
+    }
+
+    public static void printTriangle(int size) {
+        int t = 1;
+        while (t <= size) {
+            printStars(t);
+            t++;
+        }// fourth part of the exercise
+    }
+}
+
+02-34
+public class AdvancedAstrology {
+
+    public static void printStars(int number) {
+        int i = 0;
+        while (i < number) {
+            System.out.print("*");
+            i++;
+        }
+        System.out.print("\n");
+        // part 1 of the exercise
+    }
+
+    public static void printSpaces(int number) {
+        int i = 0;
+        while (i < number) {
+            System.out.print(" ");
+            i++;
+        }// part 1 of the exercise
+    }
+
+    public static void printTriangle(int size) {
+        int m = 1;
+        while (m <= size) {
+            printSpaces(size - m);
+            printStars(m);
+            m++;// part 2 of the exercise
+        }
+        
+    }
+
+    public static void christmasTree(int height) {
+        int t = 1;
+        int p = 1;
+        while (t <= height) {
+            printSpaces(height - t);
+            printStars(p);
+            t++;
+            p = p + 2;
+        }
+        printSpaces(height - 2);
+        printStars(3);
+        printSpaces(height - 2);
+        printStars(3);// part 3 of the exercise
+    }
+
+    public static void main(String[] args) {
+        // The tests are not checking the main, so you can modify it freely.
+
+        printTriangle(5);
+        System.out.println("---");
+        christmasTree(4);
+        System.out.println("---");
+        christmasTree(10);
+    }
+}
+
