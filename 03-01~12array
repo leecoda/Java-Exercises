@@ -1,0 +1,334 @@
+03-01
+import java.util.ArrayList;
+import java.util.Scanner;
+
+public class ThirdElement {
+
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        ArrayList<String> list = new ArrayList<>();
+        while (true) {
+            String input = scanner.nextLine();
+            if (input.equals("")) {
+                break;
+            }
+
+            list.add(input);
+        }
+
+        System.out.println(list.get(2));
+    }
+}
+
+03-02
+import java.util.ArrayList;
+import java.util.Scanner;
+
+public class SecondPlusThird {
+
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        ArrayList<Integer> numbers = new ArrayList<>();
+        while (true) {
+            int number = Integer.valueOf(scanner.nextLine());
+            if (number == 0) {
+                break;
+            }
+            
+            numbers.add(number);
+        }
+
+        System.out.println(numbers.get(1) + numbers.get(2));
+    }
+}
+
+03-03
+import java.util.ArrayList;
+
+public class IoobProgram {
+
+    public static void main(String[] args) {
+        // Modify this program to cause an indexOutOfBoundsException 
+
+        ArrayList<String> lines = new ArrayList<>();
+        lines.add("Never has a man influenced physics so profoundly as Niels Bohr in the early 1900's");
+        lines.add("Going back to this time period, little was known about atomic structure; Bohr set out");
+        lines.add("to end the obscurity of physics. However, things didn't come easy for Bohr. He had to");
+        lines.add("give up most of his life for physics and research of many hypothesis. But, this is why");
+        lines.add("you and I have even heard of the quantum theory and atomic structures. Bohr came");
+        lines.add("up with his quantum theory while studying...");
+
+        for (String line : lines) {
+            System.out.println(lines.get(6));
+        }
+
+    }
+}
+
+
+03-04
+
+import java.util.ArrayList;
+import java.util.Scanner;
+
+public class ListSize {
+
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        ArrayList<String> list = new ArrayList<>();
+        while (true) {
+            String input = scanner.nextLine();
+            if (input.equals("")) {
+                break;
+            }
+
+            list.add(input);
+        }
+        System.out.println(list.size());
+    }
+}
+
+03-05
+import java.util.ArrayList;
+import java.util.Scanner;
+
+public class LastInList {
+
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        ArrayList<String> list = new ArrayList<>();
+        while (true) {
+            String input = scanner.nextLine();
+            if (input.equals("")) {
+                break;
+            }
+
+            list.add(input);
+        }
+        int number = list.size() - 1;
+        System.out.println(list.get(number));
+    }
+}
+
+03-06
+import java.util.ArrayList;
+import java.util.Scanner;
+
+public class FirstAndLast {
+
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        ArrayList<String> list = new ArrayList<>();
+        while (true) {
+            String input = scanner.nextLine();
+            if (input.equals("")) {
+                break;
+            }
+
+            list.add(input);
+        }
+        int number = list.size() - 1;
+        System.out.println(list.get(0));
+        System.out.println(list.get(number));
+    }
+}
+
+03-07
+import java.util.ArrayList;
+import java.util.Scanner;
+
+public class RememberTheseNumbers {
+
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        ArrayList<Integer> numbers = new ArrayList<>();
+        while (true) {
+            int luku = Integer.valueOf(scanner.nextLine());
+            if (luku == -1) {
+                break;
+            }
+
+            numbers.add(luku);
+            System.out.println(luku);
+        }
+
+    }
+}
+
+03-08
+import java.util.ArrayList;
+import java.util.Scanner;
+
+public class OnlyTheseNumbers {
+
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        ArrayList<Integer> numbers = new ArrayList<>();
+        while (true) {
+            int number = Integer.valueOf(scanner.nextLine());
+            if (number == -1) {
+                break;
+            }
+
+            numbers.add(number);
+        }
+        System.out.println("From where?");
+        int f = scanner.nextInt();
+        System.out.println("To where?");
+        int t = scanner.nextInt();
+        while (f <= t) {
+            System.out.println(numbers.get(f));
+            f++;
+        }
+    }
+}
+
+03-09
+import java.util.ArrayList;
+import java.util.Scanner;
+
+public class GreatestInList {
+
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        ArrayList<Integer> list = new ArrayList<>();
+        while (true) {
+            int input = Integer.valueOf(scanner.nextLine());
+            if (input == -1) {
+                break;
+            }
+
+            list.add(input);
+        }
+        
+        System.out.println("");
+
+        int greatest = list.get(0);
+        for (int i = 0; i < list.size(); i++) {
+            int number = list.get(i);
+            if (greatest < number) {
+                greatest = number;
+            }
+        }
+        System.out.println("The greatest number: " + greatest);
+        // implement finding the greatest number in the list here
+    }
+}
+
+03-10
+import java.util.ArrayList;
+import java.util.Scanner;
+
+public class IndexOf {
+
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        ArrayList<Integer> list = new ArrayList<>();
+        while (true) {
+            int input = Integer.valueOf(scanner.nextLine());
+            if (input == -1) {
+                break;
+            }
+
+            list.add(input);
+        }
+
+        System.out.println("");
+
+        System.out.println("Search for?");
+        int number = scanner.nextInt();
+        for (int i = 0; i < list.size(); i++) {
+            if (number == list.get(i)) {
+                System.out.println(number + " is at index " + i);
+            }
+        }
+    // implement here finding the indices of a number
+    }
+}
+
+03-11
+import java.util.ArrayList;
+import java.util.Scanner;
+
+public class IndexOfSmallest {
+
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        ArrayList<Integer> list = new ArrayList<>();
+
+        while (true) {
+            int number = scanner.nextInt();
+            if (number == 9999) {
+                break;
+            }
+            list.add(number);
+        }
+        int smallest = list.get(0);
+        for (int i = 0; i < list.size(); i++) {
+            int numbers = list.get(i);
+            if (smallest > numbers) {
+                smallest = numbers;
+            }
+        }
+        System.out.println("Smallest number: " + smallest);
+        
+        for (int t = 0; t < list.size(); t++) {
+            if (smallest == list.get(t)) {
+                System.out.println("Found at index: " + t);
+            }
+        }
+
+
+        
+
+        
+        // implement here a program that reads user input
+        // until the user enters 9999
+        
+        // after that, the program prints the smallest number
+        // and its index -- the smallest number
+        // might appear multiple times
+
+        
+    }
+}
+
+03-12
+
+import java.util.ArrayList;
+import java.util.Scanner;
+
+public class SumOfAList {
+
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        ArrayList<Integer> list = new ArrayList<>();
+        while (true) {
+            int input = Integer.valueOf(scanner.nextLine());
+            if (input == -1) {
+                break;
+            }
+
+            list.add(input);
+        }
+
+        System.out.println("");
+        int sum = 0;
+        for (int number: list) {
+            sum = sum + number;
+        }
+        System.out.println(sum);
+        // toteuta listan lukujen summan laskeminen tänne
+    }
+}
+
