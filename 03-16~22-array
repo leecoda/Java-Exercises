@@ -1,0 +1,193 @@
+03-16
+import java.util.ArrayList;
+
+public class Sum {
+
+    public static void main(String[] args) {
+       ArrayList<Integer> numbers = new ArrayList<>();
+       numbers.add(3);
+       numbers.add(2);
+       numbers.add(6);
+       numbers.add(-1);
+       System.out.println(sum(numbers));
+       numbers.add(5);
+       numbers.add(1);
+       System.out.println(sum(numbers));
+       // Try your method here
+    }
+    public static int sum(ArrayList<Integer> numbers) {
+        int sum = 0;
+        for(int i = 0; i < numbers.size(); i++) {
+            sum = sum + numbers.get(i);
+        }
+        return sum;
+    }
+
+}
+03-17
+
+import java.util.ArrayList;
+
+public class RemoveLast {
+
+    public static void main(String[] args) {
+        ArrayList<String> strings = new ArrayList<>();
+        strings.add("First");
+        strings.add("Second");
+        strings.add("Third");
+        System.out.println(strings);
+        removeLast(strings);
+        removeLast(strings);
+        System.out.println(strings);        // Try your method in here
+    }
+    public static void removeLast(ArrayList<String> strings) {
+        if (strings.size() == 0) {
+            return;
+        }
+        strings.remove(strings.size() - 1);
+    }
+
+
+}
+03-18
+import java.util.Scanner;
+
+public class Swap {
+
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        int[] array = new int[5];
+        array[0] = 1;
+        array[1] = 3;
+        array[2] = 5;
+        array[3] = 7;
+        array[4] = 9;
+
+        int index = 0;
+        while (index < array.length) {
+            System.out.println(array[index]);
+            index++;
+        }
+        System.out.println("");
+        System.out.println("Give two indices to swap:");
+        int number1 = scanner.nextInt();
+        int number2 = scanner.nextInt();
+        int helper = array[number1];
+        array[number1] = array[number2];
+        array[number2] = helper; 
+        // Implement here
+        // asking for the two indices
+        // and then swapping them
+
+        System.out.println("");
+        index = 0;
+        while (index < array.length) {
+            System.out.println(array[index]);
+            index++;
+        }
+    }
+
+}
+
+03-19
+import java.util.Scanner;
+
+public class IndexWasNotFound {
+
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        int[] array = new int[10];
+        array[0] = 6;
+        array[1] = 2;
+        array[2] = 8;
+        array[3] = 1;
+        array[4] = 3;
+        array[5] = 0;
+        array[6] = 9;
+        array[7] = 7;
+
+        System.out.print("Search for? ");
+        int searching = Integer.valueOf(scanner.nextLine());
+        int m = 0;
+        for (int i = 0; i < array.length; i++) {
+            if (array[i] == searching) {
+                System.out.println(searching + " is at index " + i + ".");
+                break;
+            }
+            if (array[i] != searching) {
+                m++;
+            }
+            
+        }
+        if (m == array.length) {
+            System.out.println(searching + " was not found.");
+        }
+        
+        // Implement the search functionality here
+    }
+
+}
+
+03-20
+public class SumOfArray {
+
+    public static void main(String[] args) {
+        // You can try the method here
+        int[] array = {5, 1, 3, 4, 2};
+        System.out.println(sumOfNumbersInArray(array));
+    }
+
+    public static int sumOfNumbersInArray(int[] array) {
+        int sum = 0;
+        for (int i = 0; i < array.length; i++) {
+            sum = sum + array[i];
+        }// Write some code here
+        return sum;
+    }
+}
+
+03-21
+public class ArrayPrinter {
+
+    public static void main(String[] args) {
+        // You can test your method here
+        int[] array = {5, 1, 3, 4, 2};
+        printNeatly(array);
+    }
+
+    public static void printNeatly(int[] array) {
+        int i = 0;
+        while (i < array.length - 1) {
+            System.out.print(array[i] + ",");
+            i++;
+        } 
+       int m = array.length - 1;
+       System.out.print(array[m]);
+    }
+}
+
+03-22
+public class Printer {
+
+    public static void main(String[] args) {
+        // You can test the method here
+        int[] array = {5, 1, 3, 4, 2};
+        printArrayInStars(array);
+    }
+
+    public static void printArrayInStars(int[] array) {
+        for (int m = 0; m < array.length; m++) {
+            int n = array[m];
+            printStars(n);
+            System.out.println("");
+
+        }// Write some code in here
+    }
+
+    public static void printStars(int n) {
+        for (int i = 0; i < n; i++) {
+            System.out.print("*");
+        }
+    }
+
+}
