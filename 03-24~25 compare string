@@ -1,0 +1,44 @@
+03-24
+import java.util.Scanner;
+
+public class IsItTrue {
+
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Give a string:");
+        String text = scanner.nextLine();
+        if (text.equals("true")) {
+            System.out.println("You got it right!");
+            
+        } else {
+            System.out.println("Try again!");
+            
+        }
+        
+        
+    }
+}
+
+03-25
+
+import java.util.Scanner;
+
+public class Login {
+
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Enter username: ");
+        String username = scanner.nextLine();
+        System.out.println("Enter password: ");
+        String password = scanner.nextLine();
+        if (username.equals("alex") && password.equals("sunshine")) {
+            System.out.println("You have successfully logged in!"); 
+        } else if (username.equals("emma") && password.equals("haskell")) {
+            System.out.println("You have successfully logged in!"); 
+        } else {
+            System.out.println("Incorrect username or password!");
+        }
+        
+        
+    }
+}
