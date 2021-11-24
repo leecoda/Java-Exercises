@@ -13,9 +13,7 @@ public class Main {
         平均成绩做准备。再加入一个循环体之后，我把一些输出内容作了一些调整。
         3）统计三个班的及格人数。这是加一个判断语句的问题,有大于等于60的就叠加。
         4）能够实现输入班级数和每个班级人数这个需求。(先死后活，之前是5和3，现在要更换了)
-        5)能不能实现每个班级人数不一样呢？（这里又是一个先死后活的例子，之前是人数是固定的，现在要重新输入一下了）转移到一层循环里面去，在人数
-        重置的那个部分加进去
-        6）优化
+        5）优化
 	     */
 
         /*
@@ -41,7 +39,6 @@ public class Main {
             for(int s = 1; s <= studentNum; s++) {
                 System.out.println("Please input the score of student " + s + " in class " + c + ":");
                 double score = myScanner.nextDouble();
-                System.out.println("The score of student " + s + " in class " + c + " is:" + score);
                 if(score >= 60) {
                     countPass++;
                 }
@@ -54,7 +51,7 @@ public class Main {
         平均成绩做准备
          */
         }
-        System.out.println("The number of students who passed the test in this grade is:" + countPass);
+        System.out.println("The number of students who passed the test in this grade is: " + countPass);
         System.out.println("The grade average is " + (sumGrade / (studentNum * classNum)));
 
     }
