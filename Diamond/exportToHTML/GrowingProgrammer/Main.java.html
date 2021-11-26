@@ -1,0 +1,116 @@
+<html>
+<head>
+<title>Main.java</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<style type="text/css">
+.s0 { color: #cc7832;}
+.s1 { color: #a9b7c6;}
+.s2 { color: #808080;}
+.s3 { color: #6a8759;}
+.s4 { color: #6897bb;}
+</style>
+</head>
+<body bgcolor="#2b2b2b">
+<table CELLSPACING=0 CELLPADDING=5 COLS=1 WIDTH="100%" BGCOLOR="#606060" >
+<tr><td><center>
+<font face="Arial, Helvetica" color="#000000">
+Main.java</font>
+</center></td></tr></table>
+<pre><span class="s0">package </span><span class="s1">GrowingProgrammer</span><span class="s0">;</span>
+<span class="s0">import </span><span class="s1">java.util.Scanner</span><span class="s0">;</span>
+<span class="s0">public class </span><span class="s1">Main {</span>
+
+    <span class="s0">public static void </span><span class="s1">main(String[] args) {</span>
+	<span class="s2">/* 
+    思路分析： 
+    1. 打印一个正方形(9*9) 
+    ********* 
+    ********* 
+    ********* 
+    ********* 
+    ********* 
+    ********* 
+    ********* 
+    ********* 
+    ********* 
+    ********* 
+    2. 打印两条柱子 
+    3. 加上两个盖子 
+    ********* 
+    *       * 
+    *       * 
+    *       * 
+    *       * 
+    *       * 
+    *       * 
+    *       * 
+    ********* 
+ 
+    4. 打印菱形的一条边，已经有星号打印好了，（1，5）和（5，1），还有一些点（2，4），（3，3）（4，2） 
+    ********* 
+    *  *    * 
+    * *     * 
+    **      * 
+    *       * 
+    *       * 
+    *       * 
+    *       * 
+    ********* 
+    5. 打印另一条菱形边，已经有星号打印好了，（1，5）和（5，9），还有一些点（2，6）（3，7）（4，8） 
+    ********* 
+    *  * *  * 
+    * *   * * 
+    **     ** 
+    *       * 
+    *       * 
+    *       * 
+    *       * 
+    ********* 
+    6. 打印左下的一条菱形边，已经有星号打好了，（5，1）和（9，5），还有一些点（6，2）（7，3）（8，4） 
+    ********* 
+    *  * *  * 
+    * *   * * 
+    **     ** 
+    *       * 
+    **      * 
+    * *     * 
+    *  *    * 
+    ********* 
+ 
+    7. 打印右下角的一条菱形边，已经有星号打印好了，（9，5）和（5，9），还有一些点（6，8）（7，7）（8，6） 
+    ********* 
+    *  * *  * 
+    * *   * * 
+    **     ** 
+    *       * 
+    **     ** 
+    * *   * * 
+    *  * *  * 
+    ********* 
+ 
+    8. 擦去边角，留四个顶点（1，5）（5，1）（9，5）（5，9） 
+ 
+    9. 先死后活，把层数提取出来,这样改一次代码就能打印出不同层级的菱形 
+ 
+    10.设定为用户输入一个层级数字，必须是奇数，且必须大于3（这个最小数是我经过测试得出来的） 
+ 
+     */</span>
+        <span class="s1">Scanner myScanner = </span><span class="s0">new </span><span class="s1">Scanner(System.in)</span><span class="s0">;</span>
+        <span class="s1">System.out.println(</span><span class="s3">&quot;Please input an odd number (larger than or equals to 3) as the number of printing layers of the diamond:&quot;</span><span class="s1">)</span><span class="s0">;</span>
+        <span class="s0">int </span><span class="s1">n = myScanner.nextInt()</span><span class="s0">;</span>
+
+        <span class="s0">for</span><span class="s1">(</span><span class="s0">int </span><span class="s1">i = </span><span class="s4">1</span><span class="s0">; </span><span class="s1">i &lt;= n</span><span class="s0">; </span><span class="s1">i++) {</span>
+            <span class="s0">for</span><span class="s1">(</span><span class="s0">int </span><span class="s1">j = </span><span class="s4">1</span><span class="s0">; </span><span class="s1">j &lt;= n</span><span class="s0">; </span><span class="s1">j++) {</span>
+                <span class="s0">if</span><span class="s1">((i == </span><span class="s4">1 </span><span class="s1">&amp;&amp; j == (n + </span><span class="s4">1</span><span class="s1">) / </span><span class="s4">2</span><span class="s1">) || (i == (n + </span><span class="s4">1</span><span class="s1">) / </span><span class="s4">2 </span><span class="s1">&amp;&amp; j == </span><span class="s4">1</span><span class="s1">) || (i == n &amp;&amp; j == (n + </span><span class="s4">1</span><span class="s1">) / </span><span class="s4">2</span><span class="s1">) || (i == ( n + </span><span class="s4">1</span><span class="s1">) / </span><span class="s4">2 </span><span class="s1">&amp;&amp; j == n)  || j == (n + </span><span class="s4">1</span><span class="s1">) / </span><span class="s4">2 </span><span class="s1">- i + </span><span class="s4">1 </span><span class="s1">|| j == (n + </span><span class="s4">1 </span><span class="s1">) / </span><span class="s4">2 </span><span class="s1">- </span><span class="s4">1 </span><span class="s1">+ i || j == i + </span><span class="s4">1 </span><span class="s1">- ((n + </span><span class="s4">1</span><span class="s1">) / </span><span class="s4">2</span><span class="s1">) || j == (n + </span><span class="s4">1</span><span class="s1">) / </span><span class="s4">2 </span><span class="s1">+ n - i) {</span>
+                    <span class="s1">System.out.print(</span><span class="s3">&quot;*&quot;</span><span class="s1">)</span><span class="s0">;</span>
+                <span class="s1">} </span><span class="s0">else </span><span class="s1">{</span>
+                    <span class="s1">System.out.print(</span><span class="s3">&quot; &quot;</span><span class="s1">)</span><span class="s0">;</span>
+                <span class="s1">}</span>
+            <span class="s1">}</span>
+            <span class="s1">System.out.println(</span><span class="s3">&quot;&quot;</span><span class="s1">)</span><span class="s0">;</span>
+        <span class="s1">}</span>
+    <span class="s1">}</span>
+<span class="s1">}</span>
+</pre>
+</body>
+</html>
