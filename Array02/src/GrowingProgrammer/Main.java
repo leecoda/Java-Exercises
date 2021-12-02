@@ -13,7 +13,9 @@ public class Main {
         4. 优化
          */
         Scanner myScanner = new Scanner(System.in);
-        double[] score = new double[5];
+        //第一种写法：double[] score = new double[5];
+        double[] score; //也可以写成是double score;
+        score = new double[5];
         for(int i = 0; i < score.length; i++) {
             //i<5也是可以的，但是这个地方选择的是 score.length，其实是为了后期前面改一个数字，后面就可以改了
             System.out.println("Please input the score of student No." + (i + 1) + ":");
