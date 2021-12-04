@@ -2,29 +2,34 @@ package GrowingProgrammer;
 
 public class Main {
     /*
+     请求出一个数组int[]的最大值{4，-1， 9， 10， 23},并得到对应的下标
+     思路分析：
+     1. 定义数组int[] arr = {4, -1, 9, 10, 23};
+     2. 假定最大值是第一个值，max = arr[0],那么最大值的索引号就是0 （这里看似和我之前的想法是一样的，但其实这个假定某个值
+     为最大值的想法，还是和我之前不太一样。我之前是设置这个值初始值为第一个数的意思，并且我不是从1开始遍历的，是从0开始的，这样就
+     会多一个步骤。初始值和最大值还是不一样的。
+     但这个地方就假定这个值是最大值，或者想象把小球从袋子里一个一个拿出来，手里只有一个的时候自然最大的就是那一个，然后再和后面的进行比较）
+     3. 遍历从第一个数到最后一个数，每次都和这个最大值进行比较，如果比之前的max大，就把最大值进行替换，索引号也替换成相应的值
+     4. 遍历比较之后，所留下来的数就是最大值，索引号就是最大值的索引号
 
-            int largestNum = numbers[0];
-            if(numbers[1] > largestNum) {
-                largestNum = numbers[1];
-            }
-            if(numbers[2] > largestNum) {
-                largestNum = numbers[2];
-            }
-            if(numbers[3] > largestNum) {
-                largestNum = numbers[3];
-            }
-            if(numbers[4] > largestNum) {
-                largestNum = numbers[4]
-            }
-            ....
-            上面的代码进行合并算法可以是，最大值初始值设为数组的第一个值，然后把这个值和数组的值进行比较，如果更大最大值就换成这个，如果没有更大，就保持原来的最大致
-
-
+      =====上面这个代码是有一个bug的，就是如果其中的最大值有两个的话（比如有两个23），还是只会打印第一个=====
+      =====如果需要打印所有的最大数的索引值的话，还是需要我之前的那种写法，先求最大值，再求索引号====
+      =====这个练习题我学到的最大的就是，用假设自己一个一个抓小球，并记录最大求的那种方法来想这道题就简单多了====
      */
     public static void main(String[] args) {
-	// write your code here
-        int[] numbers = {4, -1, 9, 10, 23};
-        int largestNum = numbers[0];
+
+        int[] arr = {4, -1, 9, 10, 23};
+        int max = arr[0];
+        int maxIndex = 0;
+        for(int i = 1; i < arr.length; i++) {
+            //这里需要注意的是，i = 1， 但筛选条件时i < arr.length,因为要遍历的是n-1个，和之前的是不太一样的
+            if(arr[i] > max) {
+                max = arr[i];
+                maxIndex = i;
+            }
+        }
+
+        System.out.println("max = " + max + "; maxIndex = " + maxIndex);
 
     }
 }
