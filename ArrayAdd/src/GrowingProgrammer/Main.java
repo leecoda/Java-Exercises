@@ -8,6 +8,8 @@ public class Main {
 	/*
 	要求:为已知数组arr加入一个元素，由{1, 2, 3}改变为{1, 2, 3, 4}
     =======if there are no ".add" in array=======
+
+    =====just for fun. Wrong codes======
 	如果用.add的办法应该会很简单，这个地方试试用复杂的方法怎么办
 
 	1. 定义arr={1, 2, 3};
@@ -61,10 +63,10 @@ public class Main {
 
 	10. 怎么样写才能让用户持续输入数字，然后可以持续加入数组呢？这个换一个project去写
 	似乎写错了，就这样吧，但前9部都是对的
-
+    写错的原因是因为自己每次都把arr2重置了
 	 */
-
-    /*    Scanner myScanner = new Scanner(System.in);
+/*
+        Scanner myScanner = new Scanner(System.in);
         System.out.println("=======if there are no \".add\" in array=======");
         int[] arr = {1, 2, 3};
         System.out.println("Below is the old array we have");
@@ -73,6 +75,7 @@ public class Main {
         }
         System.out.println("");
         int m = 0;
+
         do {
             System.out.println("How many numbers do you want to add?");
             int n = myScanner.nextInt();
@@ -94,7 +97,7 @@ public class Main {
             System.out.println("Do you still want to add numbers to the array?(y/n)");
             String add = myScanner.nextLine();
         } while (myScanner.nextLine().equals("y"));
-    */
+*/
 
     }
 }
