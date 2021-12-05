@@ -7,10 +7,7 @@ public class Main {
     public static void main(String[] args) {
 	/*
 	要求:为已知数组arr加入一个元素，由{1, 2, 3}改变为{1, 2, 3, 4}
-    =======if there are no ".add" in array=======
 
-    =====just for fun. Wrong codes======
-	如果用.add的办法应该会很简单，这个地方试试用复杂的方法怎么办
 
 	1. 定义arr={1, 2, 3};
 	2. 遍历arr,打印测试
@@ -40,7 +37,8 @@ public class Main {
                     for(int i = 0; i < arr.length + 1; i++) {
                         System.out.print(arr2[i] + " ");
                     }
-	7. 能不能把输入多少个值给弄活？如果是加入两个呢？
+	7. 通过赋值把arr指向arr2
+	8. 能不能把输入多少个值给弄活？如果是加入两个呢？
 	arr   arrIND   arr2 arr2IND   arr.length(3) arr2.length(5 = arr.length+2)
 	1       0       1      0
 	2       1       2      1
@@ -61,43 +59,46 @@ public class Main {
 
 	9. 如果我想让user来决定加什么样的数字呢？只要是把加数字的地方换成灵活输入的即可
 
-	10. 怎么样写才能让用户持续输入数字，然后可以持续加入数组呢？这个换一个project去写
-	似乎写错了，就这样吧，但前9部都是对的
-    写错的原因是因为自己每次都把arr2重置了
+	10. 怎么样写才能让用户持续输入数字，然后可以持续加入数组呢？使用do while loop
+	之前之所以会怎么着都不成功是因为arr2叠加了新数之后没有再赋给arr，只要有再赋值的这个动作，数字就能实现叠加
+	昨天还觉得有错误解决不了，但实际情况是没有白走的弯路，昨天没有解决的问题，但是积累了好多的灵感，今天还是把原先的问题解决了
+
+    11.优化
 	 */
-/*
+
         Scanner myScanner = new Scanner(System.in);
         System.out.println("=======if there are no \".add\" in array=======");
         int[] arr = {1, 2, 3};
-        System.out.println("Below is the old array we have");
-        for(int i = 0; i < arr.length; i++) {
-            System.out.print(arr[i] + " ");
-        }
-        System.out.println("");
-        int m = 0;
-
         do {
+            System.out.println("");
+            System.out.println("Below is the current array we have");
+            for(int i = 0; i < arr.length; i++) {
+                System.out.print(arr[i] + " ");
+            }
+            System.out.println("");
+            System.out.println("");
             System.out.println("How many numbers do you want to add?");
             int n = myScanner.nextInt();
-            m += n;
-            int[] arr2 = new int[arr.length + m];
-            for(int i = 0; i < arr.length; i++) {
+            int[] arr2 = new int[arr.length + n];
+            for (int i = 0; i < arr.length; i++) {
                 arr2[i] = arr[i];
             }
-            for(int i = 1; i <= n; i++) {
+            for (int i = 1; i <= n; i++) {
                 System.out.println("Please input the number you want to add:");
-                arr2[arr.length + m - i] = myScanner.nextInt();
+                arr2[arr.length + i - 1] = myScanner.nextInt();
             }
+            arr = arr2; //因为最终实现的是arr的扩容，所以还是要把新赋值给arr；反复赋值还带来了叠加效应
             System.out.println("");
             System.out.println("Here is the new array:");
-            for(int i = 0; i < arr.length + m; i++) {
-                System.out.print(arr2[i] + " ");
+            for (int i = 0; i < arr.length; i++) {//这个时候的arr.length已经不是最早时候的arr.length了
+                System.out.print(arr[i] + " ");
             }
+            myScanner.nextLine();//清除前面用scanner时缓冲区的内容
             System.out.println("");
-            System.out.println("Do you still want to add numbers to the array?(y/n)");
-            String add = myScanner.nextLine();
-        } while (myScanner.nextLine().equals("y"));
-*/
+            System.out.println("");
+            System.out.println("Do you want to add more numbers?(y/n)");
+        } while(myScanner.nextLine().equalsIgnoreCase("y"));
 
+        System.out.println("Array adding is completed!!!");
     }
 }
